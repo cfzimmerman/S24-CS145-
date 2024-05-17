@@ -1,0 +1,26 @@
+{
+  "p4_src": "p4src/l2fwd.p4",
+  "cli": true,
+  "pcap_dump": true,
+  "enable_log": true,
+  "topology": {
+    "assignment_strategy": "l2",
+    "links": [
+      ["h1", "s1", { "bw": 1 }],
+      ["h2", "s2", { "bw": 1 }],
+      ["h3", "s3", { "bw": 1 }],
+      ["s1", "s2", { "bw": 1 }],
+      ["s2", "s3", { "bw": 1 }]
+    ],
+    "hosts": {
+      "h1": {},
+      "h2": {},
+      "h3": {}
+    },
+    "switches": {
+      "s1": {},
+      "s2": {},
+      "s3": {}
+    }
+  }
+}
